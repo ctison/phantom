@@ -1,0 +1,21 @@
+name: CI/CD
+
+on:
+  push:
+    paths-ignore:
+      - README.md
+      - .gitignore
+      - .prettierignore
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn && yarn run build
+      - if: github.ref == 'refs/heads/master'
+        env:
+          PHANTOM_API_KEY: ${{secrets.PHANTOM_API_KEY}}
+        run: yarn run publish

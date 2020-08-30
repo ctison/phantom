@@ -1,0 +1,6 @@
+[
+    name: 'My first TypeScript Phantom'
+    apiKey: 'ENV:PHANTOM_API_KEY'
+    scripts:
+        'Hackernews.js': 'dist/index.js'
+]
