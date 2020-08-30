@@ -1,6 +1,6 @@
 # Phantom scripts
 
-This repository contains puppeteer scripts to execute on phantombuster.com platform.
+This repository contains puppeteer scripts to execute on [phantombuster.com](https://phantombuster.com) platform.
 
 ## Usage
 
